@@ -1,0 +1,22 @@
+# Task 1
+SELECT * FROM products;
+SELECT name, phone FROM shippers;
+
+# Task 2
+SELECT AVG(price), MAX(price), MIN(price) FROM products;
+
+# Task 3
+SELECT DISTINCT category_id, price
+  FROM products
+  ORDER BY price DESC
+  LIMIT 10;
+
+# Task 4
+SELECT COUNT(*)
+  FROM products
+  WHERE price BETWEEN 20 AND 100;
+
+# Task 5
+SELECT supplier_id, COUNT(*), AVG(price)
+  FROM products
+  GROUP BY supplier_id;
